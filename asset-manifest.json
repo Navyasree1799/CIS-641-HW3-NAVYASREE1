@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CIS641-HW3-NAVYASREE1/static/css/main.3d01f1f9.css",
+    "main.js": "/CIS641-HW3-NAVYASREE1/static/js/main.a2e1a13f.js",
+    "index.html": "/CIS641-HW3-NAVYASREE1/index.html",
+    "main.3d01f1f9.css.map": "/CIS641-HW3-NAVYASREE1/static/css/main.3d01f1f9.css.map",
+    "main.a2e1a13f.js.map": "/CIS641-HW3-NAVYASREE1/static/js/main.a2e1a13f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3d01f1f9.css",
+    "static/js/main.a2e1a13f.js"
+  ]
+}
