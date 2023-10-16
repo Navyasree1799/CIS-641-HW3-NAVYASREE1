@@ -5,16 +5,14 @@ import Resume from "./Pages/Resume";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import Layout from "./shared/Layout/Layout";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ErrorPage from "./error-page";
 
 export const MyContext = createContext();
-
-const router = createBrowserRouter([
+const router = [
     {
         path: "/",
         element: <Home />,
-        errorElement: <ErrorPage />,
     },
     {
         path: "/resume",
@@ -28,7 +26,7 @@ const router = createBrowserRouter([
         path: "/projects",
         element: <Projects />,
     },
-]);
+];
 
 function App() {
     const [currentTab, setCurrentTab] = useState("");
@@ -37,9 +35,15 @@ function App() {
     const contextValue = useMemo(() => ({ currentTab, setCurrentTab }), [currentTab]);
 
     return (
-        <MyContext.Provider value={contextValue}>
+       <MyContext.Provider value={contextValue}>
             <Layout>
-                <RouterProvider router={router} />
+                <BrowserRouter basename="/CIS-641-HW3-NAVYASREE1">
+                    <Routes>
+                        {router.map((r) => (
+                            <Route key={r.path} path={r.path} element={r.element} />
+                        ))}
+                    </Routes>
+                </BrowserRouter>
             </Layout>
         </MyContext.Provider>
     );
