@@ -6,6 +6,7 @@ import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import Layout from "./shared/Layout/Layout";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import ErrorPage from "./error-page";
 
 export const MyContext = createContext();
 
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Home />,
+        errorElement: <ErrorPage />,
     },
     {
         path: "/resume",
